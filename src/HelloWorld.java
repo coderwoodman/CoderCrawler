@@ -1,20 +1,46 @@
-import java.util.*;
-import java.text.*;
+import java.io.*;
 
 public class HelloWorld {
 	public static void main(String[] args){
-		Dog dog=new Dog("gogo",5);
-		Dog dog2=new Dog("jiji",6);
-		
-		SimpleDateFormat ft=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
-		Date date=new Date();
-		System.out.println(ft.format(date));
-		
-		Calendar cal=Calendar.getInstance();
-		System.out.println(cal.get(Calendar.YEAR));
-		
-		GregorianCalendar gc=new GregorianCalendar();
-		System.out.println(gc.get(Calendar.YEAR));
+		try {
+			byte[] bs={'a','b','c'};
 			
+			OutputStream os=new FileOutputStream("test.txt");
+			for(byte b:bs){
+				os.write(b);
+			}
+			os.close();
+			
+			InputStream is=new FileInputStream("test.txt");
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	static void swap(int num1,int num2){
+		
+		int tmp;
+		
+		tmp=num1;
+		num1=num2;
+		num2=tmp;
+		
+	}
+	
+	static void printGrade(int score){
+		String grade="";
+		
+		if(score>80)
+			grade="A";
+		else if(score>60)
+			grade="B";
+		else
+			grade="C";
+		
+		System.out.println(grade);
 	}
 }
