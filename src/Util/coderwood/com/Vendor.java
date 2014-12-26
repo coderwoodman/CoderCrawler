@@ -1,6 +1,6 @@
 package Util.coderwood.com;
 
-public class Vendor implements java.io.Serializable{
+public class Vendor{
 	public int id;
 	public String name;
 	

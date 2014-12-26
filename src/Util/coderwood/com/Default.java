@@ -6,7 +6,7 @@ import java.util.*;
 public class Default {
 	public static void main(String[] args) {
 		try {
-			List<Vendor> vendors = new ArrayList<Vendor>();
+			List<Vendor> vendors = GetVendors();
 			System.out.println(vendors.size());
 		} catch (Exception e) {
 			e.printStackTrace();
