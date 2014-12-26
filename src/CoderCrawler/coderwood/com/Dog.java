@@ -1,5 +1,6 @@
+package CoderCrawler.coderwood.com;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements IEatable,IKilled {
 	
 	String color;
 	public final float weight =9;
@@ -19,7 +20,7 @@ public class Dog extends Animal {
 		System.out.println("");
 	}
 	
-	void barking(){
+	public void barking(){
 		System.out.println("wo~wo~");
 	}
 	
@@ -29,5 +30,9 @@ public class Dog extends Animal {
 	
 	public  void printWeight(){
 		System.out.println(this.weight);
+	}
+	
+	public void killed(){
+		System.out.println(this.name+" is killed");
 	}
 }

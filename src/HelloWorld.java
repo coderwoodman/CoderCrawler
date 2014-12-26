@@ -1,24 +1,15 @@
-import java.io.*;
+
 
 public class HelloWorld {
 	public static void main(String[] args){
 		try {
-			byte[] bs={'a','b','c'};
-			
-			OutputStream os=new FileOutputStream("test.txt");
-			for(byte b:bs){
-				os.write(b);
-			}
-			os.close();
-			
-			InputStream is=new FileInputStream("test.txt");
 			
 			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+				
 	}
 	
 	static void swap(int num1,int num2){
